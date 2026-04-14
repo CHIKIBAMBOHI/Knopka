@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Кнопка с сюрпризом</title>
+  <title>Кнопка</title>
   <style>
     body {
       margin: 0;
@@ -48,7 +48,7 @@
 
 <button onclick="start()">НАЖМИ 😈</button>
 
-<video id="video" src="video.mp4"></video>
+<video id="video" src="koullega_2026-04-14-21-21-15_1776190875555.mp4"></video>
 
 <script>
 async function start() {
@@ -59,17 +59,17 @@ async function start() {
     document.documentElement.requestFullscreen();
   }
 
-  // попытка повернуть экран (работает не везде)
+  // попытка повернуть экран
   if (screen.orientation && screen.orientation.lock) {
     try {
       await screen.orientation.lock("landscape");
     } catch (e) {}
   }
 
-  // визуальный переворот
+  // переворот
   document.body.classList.add("rotate");
 
-  // показать видео
+  // запуск видео
   video.style.display = "block";
   video.play();
 }
